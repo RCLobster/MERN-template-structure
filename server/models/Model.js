@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose');
 
-const matchupSchema = new Schema({
+// Example of model schema for MongoDB
+
+const modelSchema = new Schema({
   tech1: {
     type: String,
     required: true,
@@ -19,6 +21,6 @@ const matchupSchema = new Schema({
   },
 });
 
-const Matchup = model('Matchup', matchupSchema);
+const Model = model('Model', modelSchema);
 
-module.exports = Matchup;
+module.exports = Model;

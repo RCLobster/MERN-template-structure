@@ -1,10 +1,8 @@
-const typeDefs = `
-  type Tech {
-    _id: ID!
-    name: String!
-  }
+// Example typedefs
+// Should match across models, typedefs, resolvers, and front-end queries
 
-  type Matchup {
+const typeDefs = `
+  type Model {
     _id: ID!
     tech1: String!
     tech2: String!
@@ -13,13 +11,11 @@ const typeDefs = `
   }
 
   type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
+    model: [Model]
   }
 
   type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
+    createModel(tech1: String!, tech2: String!): Model
   }
 `;
 

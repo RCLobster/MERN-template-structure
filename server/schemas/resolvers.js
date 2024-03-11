@@ -1,27 +1,17 @@
-const { Tech, Matchup } = require('../models');
+const { Model } = require('../models');
+
+// Example queries and mutations, use model names as necessary
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
-    },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
+    model: async () => {
+      return Model.find({});
     },
   },
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
-    },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
+    createModel: async (parent, args) => {
+      const model = await Model.create(args);
+      return model;
     },
   },
 };

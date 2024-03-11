@@ -1,4 +1,5 @@
-const Tech = require('./Tech');
-const Matchup = require('./Matchup');
+// Models should match model name
 
-module.exports = { Tech, Matchup };
+const Model = require('./Model');
+
+module.exports = { Model };
