@@ -4,12 +4,12 @@ const { Model } = require('../models');
 
 const resolvers = {
   Query: {
-    model: async () => {
+    data: async () => {
       return Model.find({});
     },
   },
   Mutation: {
-    createModel: async (parent, args) => {
+    createData: async (parent, args) => {
       const model = await Model.create(args);
       return model;
     },

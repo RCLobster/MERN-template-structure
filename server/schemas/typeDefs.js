@@ -4,18 +4,17 @@
 const typeDefs = `
   type Model {
     _id: ID!
-    tech1: String!
-    tech2: String!
-    tech1_votes: Int
-    tech2_votes: Int
+    name: String!
+    data1: String!
+    data2: String!
   }
 
   type Query {
-    model: [Model]
+    data: [Model]
   }
 
   type Mutation {
-    createModel(tech1: String!, tech2: String!): Model
+    createData(data1: String!, data2: String!): Model
   }
 `;
 
