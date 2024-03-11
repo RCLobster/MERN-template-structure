@@ -17,12 +17,9 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />
       }, {
-        path: '/matchup',
-        element: <Matchup />
-      }, {
-        path: '/matchup/:id',
-        element: <Vote />
-      },
+        path: '/page1',
+        element: <Page1 />
+      }
     ],
   },
 ]);
