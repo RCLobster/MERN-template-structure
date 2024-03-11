@@ -3,21 +3,17 @@ const { Schema, model } = require('mongoose');
 // Example of model schema for MongoDB
 
 const modelSchema = new Schema({
-  tech1: {
+  name: {
     type: String,
     required: true,
   },
-  tech2: {
+  data1: {
     type: String,
     required: true,
   },
-  tech1_votes: {
-    type: Number,
-    default: 0,
-  },
-  tech2_votes: {
-    type: Number,
-    default: 0,
+  data2: {
+    type: String,
+    required: true,
   },
 });
 
